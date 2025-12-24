@@ -1,0 +1,8 @@
+{
+  "name": "SMAKSmak Enterprises",
+  "description": "A modern, high-quality streaming platform for exclusive Pakistani shows and movies, featuring glassmorphism UI and YouTube integration.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

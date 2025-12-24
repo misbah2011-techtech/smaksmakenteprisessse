@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMAKSmak Enterprises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#050505',
+                            light: '#f8f9fa'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        
+        /* Dark Theme (Default) */
+        body.dark {
+            background-color: #050505;
+            color: white;
+        }
+        
+        /* Light Theme */
+        body:not(.dark) {
+            background-color: #f8f9fa;
+            color: #1a1a1a;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #88888844;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #88888866;
+        }
+
+        .glass {
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .dark .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body:not(.dark) .glass {
+            background: rgba(0, 0, 0, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-gradient {
+            transition: background 0.5s ease;
+        }
+
+        .dark .hero-gradient {
+            background: linear-gradient(to top, #050505 0%, rgba(5, 5, 5, 0) 100%);
+        }
+
+        body:not(.dark) .hero-gradient {
+            background: linear-gradient(to top, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+</head>
+<body class="dark">
+    <div id="root"></div>
+</body>
+</html>
